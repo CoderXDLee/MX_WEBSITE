@@ -15,5 +15,5 @@ author = "admin"
 [design.background]
 # Background gradient.
   gradient_start = "#1e90ff"
-  gradient_end = "#dc143c"
+  gradient_end = "#ff0000"
 +++
