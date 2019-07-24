@@ -3,7 +3,7 @@
 
 title: "1.2 如何使用文本视图创建静态标签"
 subtitle: ""
-summary: ""
+summary: " "
 authors: [admin]
 tags: [SwiftUI]
 categories: [SwiftUI]
@@ -27,6 +27,8 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+<!-- more -->
 ### 1. 基本用法
 文本视图 `Text` 主要用于在屏幕上显示静态文本，相当于 UIKit 中的 UILabel。最基本的用法如下:
 ```swift

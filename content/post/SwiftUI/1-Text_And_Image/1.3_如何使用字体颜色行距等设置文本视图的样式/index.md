@@ -3,7 +3,7 @@
 
 title: "1.3_如何使用字体颜色行距等设置文本视图的样式"
 subtitle: ""
-summary: ""
+summary: " "
 authors: [admin]
 tags: [SwiftUI]
 categories: [SwiftUI]
@@ -27,6 +27,8 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+<!-- more -->
 文本视图不仅在外观方面给了我们一个可预见的广泛控制，而且还设计成与苹果的核心技术（如 `Dynamic Type`）无缝配合。
 
 ### 1. 字体
