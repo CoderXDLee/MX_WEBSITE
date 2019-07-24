@@ -57,5 +57,5 @@ Image("ba_xian_tai")
 ```
 运行效果:
 ![fill_content_mode](img/fill_content_mode.png "content mode = .fill")
-
-注意: 在当前的测试版中，有一个bug，.fit内容模式仍然会导致图像被拉伸。
+![fit_content_mode](img/fit_content_mode.png "content mode = .fit")
+注意: 在当前的测试版中，有一个bug，`.fit` 内容模式仍然会导致图像被拉伸。
