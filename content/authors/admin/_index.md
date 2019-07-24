@@ -69,6 +69,7 @@ user_groups:
 - Researchers
 - Visitors
 ---
+
 - Avoiding Knowledge
 - Respect for knowledge
 - Absorbing knowledge
