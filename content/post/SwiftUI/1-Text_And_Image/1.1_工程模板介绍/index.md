@@ -31,8 +31,7 @@ projects: []
 <!-- more -->
 > **提示**: 您可能认为本章完全可以跳过，但除非你是一个 Swift 天才，否则你应该读到最后再确定。
 
-![swiftui_project_template](https://github.com/CoderXDLee/MX_WEBSITE/blob/master/content/post/SwiftUI/1-Text_And_Image/img/swiftui_project_template.png?raw=true "SwiftUI Project Template Files")
-
+![swiftui_project_template](img/swiftui_project_template.png)
 如图，自 Xcode 11 之后，基本的 *Single View App* 模板为我们提供以下内容:
 
 * `AppDelegate.swift` 
