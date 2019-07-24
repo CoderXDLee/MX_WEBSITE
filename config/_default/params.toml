@@ -164,7 +164,7 @@ sharing = true
 
   # Configuration of Disqus.
   [comments.disqus]
-    shortname = ""  # Paste the shortname from your Disqus dashboard.
+    shortname = "M X"  # Paste the shortname from your Disqus dashboard.
     show_count = true  # Show comment count in page header? (true/false)
 
 # Search.
