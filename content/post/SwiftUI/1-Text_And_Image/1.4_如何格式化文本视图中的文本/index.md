@@ -4,9 +4,9 @@
 title: "1.4_如何格式化文本视图中的文本"
 subtitle: ""
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [SwiftUI]
+categories: [SwiftUI]
 date: 2019-07-24T15:43:29+08:00
 lastmod: 2019-07-24T15:43:29+08:00
 featured: false

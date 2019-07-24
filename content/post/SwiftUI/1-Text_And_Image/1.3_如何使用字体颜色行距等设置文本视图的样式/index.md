@@ -4,9 +4,9 @@
 title: "1.3_如何使用字体颜色行距等设置文本视图的样式"
 subtitle: ""
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [SwiftUI]
+categories: [SwiftUI]
 date: 2019-07-24T15:42:28+08:00
 lastmod: 2019-07-24T15:42:28+08:00
 featured: false
