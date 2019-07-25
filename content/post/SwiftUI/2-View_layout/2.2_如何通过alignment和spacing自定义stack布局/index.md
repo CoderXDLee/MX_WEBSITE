@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "2.1_如何通过alignment和spacing自定义stack布局"
+title: "2.2_如何通过alignment和spacing自定义stack布局"
 subtitle: ""
 summary: " "
 authors: []
