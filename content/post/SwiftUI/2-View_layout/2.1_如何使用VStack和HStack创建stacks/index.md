@@ -4,9 +4,9 @@
 title: "2.1_如何使用VStack和HStack创建stacks"
 subtitle: ""
 summary: " "
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [SwiftUI]
+categories: [SwiftUI]
 date: 2019-07-25T10:10:50+08:00
 lastmod: 2019-07-25T10:10:50+08:00
 featured: false
@@ -71,7 +71,7 @@ var body: some View {
 }
 ```
 运行效果:
-![two_text_in_vstack](img/two_text_in_vstack.png "Two text in VStack")
+![two_text_in_vstack](img/two_text_in_vstack.png "Two texts in VStack")
 
 您会注意到 `VStack` 放置在屏幕的中心，标签也居中，它们之间有一些自动空间。
 
@@ -88,4 +88,4 @@ var body: some View {
 }
 ```
 运行效果:
-![two_text_in_hstack](img/two_text_in_hstack.png "Two text in HStack")
+![two_text_in_hstack](img/two_text_in_hstack.png "Two texts in HStack")
