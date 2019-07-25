@@ -69,7 +69,7 @@ Image(systemName: "cloud.heavyrain.fill")
 运行效果:
 ![foreground_color_image](img/foreground_color_image.png "set foreground color for system icon")
 ### 5. 动态文本样式
-这意味着你可以要求 SwiftUI 放大图像，以匹配随附的任何 `Dynamic Type` 文本样式:
+这意味着你可以通过匹配任何 `Dynamic Type` 文本样式，来要求 SwiftUI 放大图像:
 ```swift
 Image(systemName: "cloud.heavyrain.fill")
     .font(.largeTitle)
