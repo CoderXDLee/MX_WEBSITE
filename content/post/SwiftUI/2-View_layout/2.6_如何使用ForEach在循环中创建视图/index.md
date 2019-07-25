@@ -54,7 +54,8 @@ var body: some View {
 运行效果:
 ![foreach_create_views](img/foreach_create_views.png "Create views using ForEach")
 
-对于简单类型数组（如字符串、整数、颜色等）的循环，可以在数组上使用 `.identified(by: \.self)`，让 SwiftUI  使用值本身作为标识符。因此，如果您的数组是 ["cat", "Dog", "monkey"]，那么 SwiftUI 会将这些字符串本身作为您的视图的标识符。
+### 2. ForEach colors
+对于简单类型数组（如字符串、整数、颜色等）的循环，可以在数组上使用 `.identified(by: \.self)`，让 SwiftUI  使用值本身作为标识符。因此，如果您的数组是 `["cat", "Dog", "monkey"]`，那么 SwiftUI 会将这些字符串本身作为您的视图的标识符。
 因此，此代码创建一个包含三种颜色的数组，在它们上面循环，并使用每个颜色名称和颜色值创建文本视图：
 
 ```swift
@@ -73,6 +74,8 @@ var body: some View {
 ```
 运行效果:
 ![foreach_colors_array](img/foreach_colors_array.png "foreach colors")
+
+### 3. ForEach custom type
 如果您的数组中有自定义类型，则应使用  `.identified(by:)` 与您的类型中的任何属性唯一标识它。
 例如，这是一个存储测试结果的结构，如下所示：
 ```swift
@@ -81,7 +84,7 @@ struct Result {
     var score: Int
 }
 ```
-它有一个带有UUID的id属性，这意味着它保证是唯一的 - 完美的用于我们的目的。 如果我们想循环一个结果数组，创建一个显示VStack中每个结果的文本视图，那么我们将使用它：
+它有一个带有 `UUID` 的 `id` 属性，这意味着它保证是唯一的 - 完美的用于我们的目的。 如果我们想循环一个结果数组，创建一个显示 `VStack` 中每个结果的文本视图，那么我们将使用它：
 ```swift
 let results = [Result(score: 8), Result(score: 5), Result(score: 10)]
     
@@ -93,5 +96,7 @@ var body: some View {
     }
 }
 ```
-这告诉SwiftUI它可以通过查看它们的id属性来区分ForEach中的视图。
-提示：如果您使Result符合Identifiable protocol，您只需编写ForEach（结果）。 符合此协议意味着添加唯一标识每个对象的id属性，在我们的示例中我们已经拥有，因此您只需编写 `struct Result：Identifiable {`！
+运行效果:
+![foreach_custom_type](img/foreach_custom_type.png "ForEach custom type")
+这告诉 SwiftUI 它可以通过查看它们的 `id` 属性来区分 `ForEach` 中的视图。
+**提示**：如果您使 `Result` 符合 `Identifiable` protocol，您只需编写 `ForEach（Result）`。 符合此协议意味着添加唯一标识每个对象的 `id` 属性，在我们的示例中我们已经拥有，因此您只需编写 `struct Result：Identifiable {`！
