@@ -76,6 +76,7 @@ var body: some View {
     }
 }
 ```
+运行效果:
 ![padding_100](img/padding_100.png "Set padding as 100")
 ### 4. 在视图一侧添加特定数量的填充
 我们也可以将这两者结合起来，在视图的一侧添加特定数量的填充：

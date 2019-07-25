@@ -61,6 +61,6 @@ var body: some View {
     }
 }
 ```
-运行方式:
+运行效果:
 ![zstack_alignment_leading](img/zstack_alignment_leading.png "Set zstack's alignment as .leading")
 但是，它没有 _spacing_ 属性，因为它实际上没有意义。
