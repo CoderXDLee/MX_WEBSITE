@@ -35,6 +35,7 @@ SwiftUI 的内容视图 _content views_ 必须返回一个视图，即我们希�
 * 水平（HStack）
 * 垂直（VStack）
 * 基于深度（ZStack）
+
 当我们想放置子视图以便它们重叠时可以使用后者。
 
 ### 1. VStack
