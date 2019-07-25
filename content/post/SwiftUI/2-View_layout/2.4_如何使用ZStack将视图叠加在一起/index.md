@@ -3,10 +3,10 @@
 
 title: "2.4_如何使用ZStack将视图叠加在一起"
 subtitle: ""
-summary: ""
-authors: []
-tags: []
-categories: []
+summary: " "
+authors: [admin]
+tags: [SwiftUI]
+categories: [SwiftUI]
 date: 2019-07-25T13:26:52+08:00
 lastmod: 2019-07-25T13:26:52+08:00
 featured: false
@@ -27,3 +27,35 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+SwiftUI 有一个专用的 _stack_ 类型，用于创建重叠内容，例如，如果我们想在图片上放置一些文本，它就很有用。它被称为 `ZStack`，其工作原理与其他两种 _stack_ 类型相同。
+1.在文本下面放置图片
+例如: 我们可以在如下文本下面放置一个大图像:
+```swift
+var body: some View {
+    ZStack() {
+        Image("example-image")
+        Text("Hello SwiftUI")
+            .font(.largeTitle)
+            .background(Color.black)
+            .foregroundColor(.white)
+    }
+}
+```
+
+2. 对齐
+与其它堆栈类型一样，ZStack 也可以通过对齐方式创建，这样它就不会总是将事物置于自身的中心位置:
+```swift
+var body: some View {
+    ZStack(alignment: .leading) {
+        Image("example-image")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+        Text("Hello SwiftUI")
+            .font(.largeTitle)
+            .background(Color.black)
+            .foregroundColor(.white)
+    }
+}
+```
+但是，它没有 spacing 属性，因为它实际上没有意义。
