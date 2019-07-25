@@ -30,7 +30,7 @@ projects: []
 
 SwiftUI 允许我们使用 `padding()` 修饰符在视图周围设置单独的填充。
 ### 1. 系统默认 padding
-如果在没有参数的情况下使用此选项，您将在所有边上获得系统默认填充，如下所示:
+如果在不传参数的情况下使用 _padding()_ ，您将在所有边上获得系统默认填充，如下所示:
 ```swift
 var body: some View {
     VStack {
@@ -61,7 +61,7 @@ var body: some View {
 ```
 运行效果:
 ![padding_system_bottom](img/padding_system_bottom.png "Set bottom padding with system default")
-注意: 这里只设置了底部填充，以上面的例子不同。
+注意: 这里只设置了底部填充，与上面的例子不同。
 
 ### 3. 用具体数值来设置 padding
 我们可能希望控制对所有边应用了多少填充:
