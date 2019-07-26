@@ -41,4 +41,4 @@ var body: some View {
 }
 ```
 运行效果:
-![edgesIgnoringSafeArea](img/edgesIgnoringSafeArea.png "edgesIgnoringSafeArea")
+![edgesIgnoringSafeArea](img/edgesIgnoringSafeArea.png "edgesIgnoringSafeArea(.all)")
