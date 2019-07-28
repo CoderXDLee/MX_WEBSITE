@@ -5,7 +5,7 @@ title: "1.6_如何调整图像视图的填充模式"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["Text and image"]
 categories: [SwiftUI]
 date: 2019-07-24T15:45:07+08:00
 lastmod: 2019-07-24T15:45:07+08:00

@@ -5,7 +5,7 @@ title: "2.2_如何通过alignment和spacing自定义stack布局"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["View layout"]
 categories: [SwiftUI]
 date: 2019-07-25T10:54:52+08:00
 lastmod: 2019-07-25T10:54:52+08:00

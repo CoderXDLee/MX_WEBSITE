@@ -5,7 +5,7 @@ title: "1.9_如何使用图像和其它视图作为背景"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["Text and image"]
 categories: [SwiftUI]
 date: 2019-07-24T15:46:29+08:00
 lastmod: 2019-07-24T15:46:29+08:00

@@ -5,7 +5,7 @@ title: "1.2 如何使用文本视图创建静态标签"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["Text and image"]
 categories: [SwiftUI]
 date: 2019-07-24T13:35:01+08:00
 lastmod: 2019-07-24T13:35:01+08:00

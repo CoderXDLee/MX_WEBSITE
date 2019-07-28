@@ -5,7 +5,7 @@ title: "1.1 工程模板介绍"
 subtitle: ""
 summary: "The introduction of SwiftUI project template"
 authors: [admin]
-tags: [SwiftUI]
+tags: ["Text and image"]
 categories: [SwfitUI]
 date: 2019-07-23T15:51:58+08:00
 lastmod: 2019-07-23T15:51:58+08:00

@@ -5,7 +5,7 @@ title: "1.5_如何使用图像视图绘制图像"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["Text and image"]
 categories: [SwiftUI]
 date: 2019-07-24T15:44:15+08:00
 lastmod: 2019-07-24T15:44:15+08:00
