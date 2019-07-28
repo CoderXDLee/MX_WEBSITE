@@ -5,7 +5,7 @@ title: "2.6_如何使用ForEach在循环中创建视图"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: ["SwiftUI"]
+tags: ["View layout"]
 categories: ["SwiftUI"]
 date: 2019-07-26T00:21:40+08:00
 lastmod: 2019-07-26T00:21:40+08:00

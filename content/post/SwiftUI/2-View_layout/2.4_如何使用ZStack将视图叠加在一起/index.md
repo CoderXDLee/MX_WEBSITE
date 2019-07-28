@@ -5,7 +5,7 @@ title: "2.4_如何使用ZStack将视图叠加在一起"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["View layout"]
 categories: [SwiftUI]
 date: 2019-07-25T13:26:52+08:00
 lastmod: 2019-07-25T13:26:52+08:00

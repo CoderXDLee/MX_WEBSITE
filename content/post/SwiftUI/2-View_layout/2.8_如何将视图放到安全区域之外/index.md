@@ -5,7 +5,7 @@ title: "2.8_如何将视图放到安全区域之外"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: ["SwiftUI"]
+tags: ["View layout"]
 categories: ["SwiftUI"]
 date: 2019-07-26T22:12:50+08:00
 lastmod: 2019-07-26T22:12:50+08:00

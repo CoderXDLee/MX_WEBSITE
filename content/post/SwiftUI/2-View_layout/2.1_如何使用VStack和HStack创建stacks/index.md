@@ -5,7 +5,7 @@ title: "2.1_如何使用VStack和HStack创建stacks"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["View layout"]
 categories: [SwiftUI]
 date: 2019-07-25T10:10:50+08:00
 lastmod: 2019-07-25T10:10:50+08:00

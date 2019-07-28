@@ -5,7 +5,7 @@ title: "2.3_如何使用padding控制单个视图周围的间距"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["View layout"]
 categories: [SwiftUI]
 date: 2019-07-25T11:39:45+08:00
 lastmod: 2019-07-25T11:39:45+08:00

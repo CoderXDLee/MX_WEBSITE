@@ -5,7 +5,7 @@ title: "2.7_如何使用size_classes创建不同的布局"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: ["SwiftUI"]
+tags: ["View layout"]
 categories: ["SwiftUI"]
 date: 2019-07-26T16:52:17+08:00
 lastmod: 2019-07-26T16:52:17+08:00

@@ -5,7 +5,7 @@ title: "2.5_如何返回不同的视图类型"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: [SwiftUI]
+tags: ["View layout"]
 categories: [SwiftUI]
 date: 2019-07-25T13:47:21+08:00
 lastmod: 2019-07-25T13:47:21+08:00
