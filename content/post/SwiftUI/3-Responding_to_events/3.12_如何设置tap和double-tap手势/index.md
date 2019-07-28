@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "3.12_如何阅读tap和double Tap手势"
+title: "3.12_如何设置tap和double Tap手势"
 subtitle: ""
 summary: " "
 authors: [admin]
