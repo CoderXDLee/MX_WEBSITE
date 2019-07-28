@@ -5,7 +5,7 @@ title: "3.4_如何从TextField中读取文本"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: ["SwiftUI"]
+tags: ["Responding to events"]
 categories: ["SwiftUI"]
 date: 2019-07-27T21:42:21+08:00
 lastmod: 2019-07-27T21:42:21+08:00

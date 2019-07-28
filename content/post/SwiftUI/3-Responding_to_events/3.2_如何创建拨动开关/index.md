@@ -3,9 +3,9 @@
 
 title: "3.2_如何创建拨动开关"
 subtitle: ""
-summary: ""
+summary: " "
 authors: [admin]
-tags: ["SwiftUI"]
+tags: ["Responding to events"]
 categories: ["SwiftUI"]
 date: 2019-07-27T15:55:42+08:00
 lastmod: 2019-07-27T15:55:42+08:00

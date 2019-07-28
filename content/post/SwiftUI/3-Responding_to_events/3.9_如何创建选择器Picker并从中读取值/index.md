@@ -5,7 +5,7 @@ title: "3.9_如何创建选择器Picker并从中读取值"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: ["SwiftUI"]
+tags: ["Responding to events"]
 categories: ["SwiftUI"]
 date: 2019-07-27T23:56:24+08:00
 lastmod: 2019-07-27T23:56:24+08:00
