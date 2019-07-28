@@ -6,7 +6,7 @@ subtitle: ""
 summary: " "
 authors: [admin]
 tags: ["Text and image"]
-categories: [SwiftUI]
+categories: ["SwfitUI"]
 date: 2019-07-24T13:35:01+08:00
 lastmod: 2019-07-24T13:35:01+08:00
 featured: false
