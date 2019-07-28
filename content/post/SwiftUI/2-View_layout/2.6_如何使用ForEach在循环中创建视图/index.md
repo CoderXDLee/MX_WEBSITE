@@ -6,7 +6,7 @@ subtitle: ""
 summary: " "
 authors: [admin]
 tags: ["View layout"]
-categories: ["SwiftUI"]
+categories: ["SwfitUI"]
 date: 2019-07-26T00:21:40+08:00
 lastmod: 2019-07-26T00:21:40+08:00
 featured: false
