@@ -28,10 +28,10 @@ image:
 projects: []
 ---
 <!-- more -->
-SwiftUI 的 `List` 视图类似于 `UITableView`，它可以根据您的需要显示静态或动态表视图单元格。 但是，它使用起来要简单得多:
+SwiftUI 的 `List` 视图类似于 `UITableView`，它可以根据您的需要显示静态或动态表视图单元格(table view cells)。 但是，它使用起来要简单得多:
 
-* 我们不需要在 storyboard 中创建 _prototype cell_ ; 
-* 也不需要在代码中注册它们; 
+* 我们不需要在 storyboard 中创建原型cell( _prototype cell_ ); 
+* 也不需要在代码中注册 Cell; 
 * 我们不需要告诉它有多少行; 
 * 我们不需要手动出列(dequeue)和配置单元格等等。
 
