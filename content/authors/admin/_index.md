@@ -70,7 +70,7 @@ user_groups:
 - Visitors
 ---
 
-- Avoiding Knowledge
+- Revere Knowledge
 - Respect for knowledge
 - Absorbing knowledge
 - Master knowledge
