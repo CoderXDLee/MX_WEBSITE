@@ -40,11 +40,13 @@ struct ContentView : View {
     var body: some View {
         NavigationView {
             Form {
-                SegmentedControl(selection: $selectedColor) {
+                Picker(selection: $selectedColor, label: Text("")) {
                     ForEach(0..<colors.count) {
                         Text(self.colors[$0]).tag($0)
                     }
                 }
+                .pickerStyle(SegmentedPickerStyle())
+                
                 Toggle(isOn: $enableLogging) {
                     Text("Enable logging!")
                 }
