@@ -64,4 +64,4 @@ struct ContentView : View {
 }
 ```
 运行效果:
-![6.4_form_sections](img/6.4_form_sections.gif "Form sections")
+![6.3_form_sections](img/6.3_form_sections.gif "Form sections")
