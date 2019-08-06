@@ -28,9 +28,9 @@ image:
 projects: []
 ---
 <!-- more -->
-默认情况下，视图只占用所需的空间，但是如果您希望更改空间，可以使用 `frame()` 修饰符告诉SwiftUI 您想要的大小范围是什么。
+默认情况下，视图只占用自己所需的空间，但是如果我们想要更改它，可以使用 `frame()` 修饰符告诉 SwiftUI 我们想要的尺寸范围(size range)。
 
-例如，可以创建一个具有200x200可点击区域的按钮，如下所示:
+例如，可以创建一个具有 `200x200` 可点击区域的按钮，如下所示:
 ```swift
 struct ContentView: View {
     var body: some View {
@@ -45,12 +45,18 @@ struct ContentView: View {
 }
 ```
 效果预览:
-![10.1_give_a_custom_frame](img/10.1_give_a_custom_frame.png "Give a custom frame")
-或者，我们可以通过指定一个 frame 来使文本视图填充这个屏幕，这个 frame 的最小宽度和最小高度为0，最大宽度和最大高度是无穷大。如下所示:
+![10.1_frame_200wh_button](img/10.1_frame_200wh_button.png "Create a 200 * 200 button")
+或者，我们可以通过指定一个 frame 来使文本视图填充整个屏幕，这个 frame 的最小宽度和最小高度为0，最大宽度和最大高度是无穷大。如下所示:
 ```swift
-Text("Please login")
-    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-    .font(.largeTitle)
-    .foregroundColor(Color.white)
-    .background(Color.red)
+struct ContentView: View {
+    var body: some View {
+        Text("Please login")
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                .font(.largeTitle)
+                .foregroundColor(Color.white)
+                .background(Color.red)
+    }
+}
 ```
+效果预览:
+![10.1_frame_fill_screen_text](img/10.1_frame_fill_screen_text.png "Create a text which fills the screen")
