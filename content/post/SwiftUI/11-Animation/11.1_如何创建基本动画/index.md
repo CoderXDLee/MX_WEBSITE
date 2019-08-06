@@ -5,7 +5,7 @@ title: "11.1_如何创建基本动画"
 subtitle: ""
 summary: " "
 authors: [admin]
-tags: ["Transforming views"]
+tags: ["Animation"]
 categories: ["SwiftUI"]
 date: 2019-08-06T16:16:55+08:00
 lastmod: 2019-08-06T16:16:55+08:00
