@@ -66,3 +66,4 @@ struct ContentView: View {
 }
 ```
 ![10.10_scale_with_anchor](img/10.10_scale_with_anchor.png "Specify an anchor")
+这使得文本视图两倍于常规大小，从右下角缩放。
