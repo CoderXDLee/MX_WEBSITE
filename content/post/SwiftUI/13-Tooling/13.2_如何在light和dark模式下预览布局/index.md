@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "13.1_如何在light和dark模式下预览布局"
+title: "13.2_如何在light和dark模式下预览布局"
 subtitle: ""
 summary: " "
 authors: [admin]
