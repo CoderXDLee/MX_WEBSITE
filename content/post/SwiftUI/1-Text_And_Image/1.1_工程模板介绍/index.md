@@ -29,32 +29,34 @@ projects: []
 ---
 
 <!-- more -->
-> **提示**: 您可能认为本章完全可以跳过，但除非你是一个 Swift 天才，否则你应该读到最后再确定。
+> **小贴士**: 你可能认为本章是完全可以略读的，但除非你是一个 Swift 天才，否则你应该读到最后再确定。
 
-![swiftui_project_template](img/swiftui_project_template.png)
+### 1. 简介
+![1.1_swiftui_basic_template](img/1.1_swiftui_basic_template.png)
 如图，自 Xcode 11 之后，基本的 *Single View App* 模板为我们提供以下内容:
 
 * `AppDelegate.swift` 
-  - 这个文件负责监视外部事件。例如，如果另一个应用程序试图向您发送要打开的文件。
+  - 它负责监视外部事件。例如: 如果另一个应用程序试图向我们发送要一个要打开的文件。
 * `SceneDelegate.swift` 
-  - 这个文件负责管理应用程序的显示方式。例如让多个实例同时运行，或者当一个实例移动到后台时采取操作。
+  - 它负责管理应用程序的显示方式。例如: 让多个实例同时运行，或者当一个实例移动到后台时采取操作/措施。
 * `ContentView.swift` 
-  - 这个文件是我们的初始用户界面。如果这是一个 UIKit 项目，这个文件相当于是 Xcode 提供给我们的 *ViewController* 类。
+  - 它是我们的初始用户界面。如果这是一个 UIKit 项目，它就相当于是 Xcode 提供给我们的 *ViewController* 类。
 * `Assets.xcassets` 
-  - 这个文件是项目的资产目录。存储着我们项目中使用的所有图像和颜色。
+  - 它是项目的资产目录。存储着我们项目中使用的所有图像和颜色。
 * `LaunchScreen.storyboard` 
-  - 这是应用加载时显示的屏幕。
+  - 它是应用加载时显示的屏幕。
 * `Info.plist` 
-  - 这是一个属性列表文件，在本例中，它用于存储应用程序的系统级设置。例如，应该在 iOS 主屏幕的图标下面显示什么名称。
+  - 它是一个属性列表文件，用于存储应用程序的系统级设置。例如: 应该在 iOS 主屏幕的图标下面显示什么名称。
 * `Preview content`  
-  - 一个名为 *Preview content* 的组，其中包含另一个名为 *Preview Assests* 的资产目录。
+  - 它是一个名为 *Preview content* 的组，其中包含另一个名为 *Preview Assests* 的资产目录。
 
-就是这样 - 这是一个令人愉快的少量代码和资源，这意味着我们可以在此基础上进行构建。
+就是这样 - 只有少量的代码和资源，这意味着我们可以在此基础上进行构建。
 
+### 2. 查看 SceneDelegate
 我们真正关心的是 `ContentView.swift`，  事实上，这是唯一重要的部分。这是我们应用程序的主要功能，在这里我们可以立即开始尝试各种 `SwiftUI` 代码。
 
-首先，是什么让 `ContentView.swift` 显示在屏幕上？  
-好吧，如果你还记得我说过 `SceneDelegate.swift`  负责管理应用程序的显示方式。那么，继续打开 `SceneDelegate.swift`，您会看到下面的代码:
+是什么让 _ContentView.swift_ 显示在屏幕上？  
+上面提到: `SceneDelegate.swift` 负责管理应用程序的显示方式。那么，我们打开 `SceneDelegate.swift`，就会看到下面的代码:
 
 ```swift
 let window = UIWindow(windowScene: windowScene)
@@ -63,9 +65,10 @@ self.window = window
 window.makeKeyAndVisible()
 ```
 
-这段代码创建了一个新的 `ContentView` 实例（这是我们即将看到的主要功能），并将其放在 `window` 中，以便在屏幕上显示。它通过显示 `ContentView` 的第一个实例，可以有效地引导我们的应用程序，并从那里结束 - 你想做什么？
+这段代码创建了一个新的 `ContentView` 实例（这是我们即将看到的主要功能），并将其放在 `window` 中，以便在屏幕上显示。通过显示 `ContentView` 的第一个实例，可以有效地引导我们的应用程序，并从那里结束 - 你想做什么？
 
-打开  `ContentView.swift` ，让我们看看实际的 SwiftUI 代码。您应该看到这样的代码:
+### 3. 查看 ContentView
+打开  `ContentView.swift` ，让我们看看实际的 SwiftUI 代码。可以看到这样的代码:
 
 ```swift
 import SwiftUI
@@ -85,18 +88,14 @@ struct ContentView_Previews : PreviewProvider {
 #endif
 ```
 
-这不是很多代码，但它确实包含了大量代码。
+* 首先，请注意，`ContentView` 是一个结构体。熟悉 UIKit 的开发人员知道 - 我们从用户界面的所有值类型的不可变性和简单性中获益巨大！
 
-首先，请注意，`ContentView` 是一个结构体（struct）。熟悉 UIKit 的开发人员知道 - 我们从用户界面的所有值类型的不可变性和简单性中获益巨大！不熟悉 UIKit 的人... 嗯，只是点头微笑 - 你从来不知道我们曾经的痛苦。
+* 其次，`ContentView` 遵守 `View` 协议。我们想在 SwiftUI 中显示的所有内容都需要遵守 `View` 协议，这实际上只意味着一件事: 我们需要一个名为 `body` 的属性来返回某种 `View`。
 
-其次，`ContentView` 符合 `View` 协议。你想在 SwiftUI 中显示的所有内容都需要符合 `View`，这实际上只意味着一件事: 你需要一个名为 body 的属性来返回某种 View。
+* 第三，`body` 的返回类型是 `some View`。`some` 关键字是在 Swift 5.1 中新增的，是一个名为 **不透明返回类型（opaque return types）** 功能的一部分，在这种情况下，它的意思是 将返回某种视图，但 SwiftUI 不需要知道（或关心）什么。
 
-第三，`body` 的返回类型是 `some View`。`some` 关键字是在 Swift 5.1 中新增的，是一个名为 *不透明返回类型（opaque return types）* 的功能的一部分，在这种情况下，它的意思是 *将返回某种视图，但 SwiftUI 不需要知道（或关心）什么。*
+> **重要说明:** 返回 `some View` 意味着 `body` 属性将返回遵守 `View` 协议的内容。我们不能返回很多东西或忘记返回任何东西 -- Swift 编译器将拒绝构建代码。要清楚，我们的视图正文必须返回一个子视图。
 
-**重要说明:** 返回 `some View` 意味着 `body` 属性将返回符合 `View` 协议的内容。你不能返回很多东西或忘记返回任何东西 -- Swift 编译器将拒绝构建你的代码。要清楚，您的视图正文必须返回一个子视图。
+* 第四，body 属性中有 `Text("hello world")`，它创建了文本内容为 "hello world" 的标签。
 
-第四，body属性中有 `Text("hello world")`，它创建了文本内容为 “hello world”的标签。
-
-最后，在 ContentView 下面的是一个类似但不同的 struct，称为 `ContentView_Previews`。它不符合 `View` 协议，因为它专门用于在 Xcode 中显示 视图预览（Preview），而不是在真实 app 中显示在屏幕上。这就是为什么你会看到它在 `#if DEBUG` 和 `#endif` 之间 - 当我们的应用程序在调试环境中运行时，这段代码只构建在 *成品（finished product）*中，因为它在生产应用程序（Production app）中没有意义。
-
-我们很快就会更详细地看一下这些组件（components），但首先让我们看一下 `Text` 组件。
+* 最后，在 ContentView 下面的是一个类似但不同的 struct，称为 `ContentView_Previews`。它不遵守 `View` 协议，因为它专门用于在 Xcode 中显示 视图预览（Preview），而不是在真实 app 中显示在屏幕上。这就是为什么你会看到它在 `#if DEBUG` 和 `#endif` 之间 - 当我们的应用程序在调试环境中运行时，这段代码只构建在 成品（finished product）中，因为它在生产应用程序（Production app）中没有意义。
