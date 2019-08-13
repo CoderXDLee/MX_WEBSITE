@@ -37,26 +37,24 @@ projects: []
 ```swift
 Text("Hello world")
 ```
-在内容视图的预览窗口中，您可能会看到 `Automatic preview updating paused`， 继续按 `Resume` 以让 Swift 开始构建代码并向您展示其外观的实时预览。
-效果预览:
-![]()
+在 `ContentView` 的预览窗口中，我们可能会看到 `Automatic preview updating paused`， 继续按 `Resume` 以让 Swift 开始构建代码并向我们展示 `ContentView` 外观的实时预览。
 
-### 2. 设置显示行数
-默认情况下，Text 只显示一行 - 如果空间不足，字符将被剪切并替换为 `...`。因此如果我们要显示的文本很长，就会看到这种情况发生。如果要改变这种行为 - 比如你希望  Text 可以显示多行文本，那么可以这样做，使其具有特定的行数:
+### 3. 设置显示行数
+默认情况下，Text 只显示一行 - 如果空间不足，字符将被剪切并替换为 `...`。因此如果我们要显示的文本很长，我们就会看到这种情况发生。如果要改变这种行为 - 比如你希望  Text 可以显示多行文本，那么可以这样做，使其具有特定的行数:
 ```swift
 Text("Hello world")
     .lineLimit(3)
 ```
-> **提示**: 请注意 `lineLimit(3)` 位于 `Text("Hello World")` 下方靠右侧的方式。这不是必需的，但它确实使您的代码更易于阅读。
+> **提示**: 请注意 `lineLimit(3)` 位于 `Text("Hello World")` 下方靠右侧的方式。这不是必需的，但从长远来看，它确实使我们的代码更易于阅读。
 
-或者，可以将 `nil` 指定给 `lineLimit()` 方法，该方法允许它根据需要运行在任意多行:
+或者，我们可以为 `lineLimit()` 方法指定 `nil`，这样就允许它根据需要运行任意多行:
 ```swift
 Text("Hello World")
     .lineLimit(nil)
 ```
 > **注意:** 这里设置 `lineLimit(0)` 不能实现多行显示，这一点跟 UIKit 中是不一样的。
 
-### 3. 文本截断
+### 4. 文本截断
 我们也可以调整 SwiftUI 截断文本的方式，而不是调整行数。默认情况下，从末尾删除文本并显示省略号，但也可以将省略号放在中间或开头，具体取决于字符串各个部分的重要程度。
 
 例如: 以下代码会在中间截断文本
@@ -64,4 +62,4 @@ Text("Hello World")
 Text("This is an extremely long string that will never fit even the widest of Phones.")
     .truncationMode(.middle)
 ```
-不管我们如何截断文本，我们将看到文本视图始终位于主视图（main view）的中心。这是 SwiftUI 的默认行为 -- 除非我们明确告诉 SwiftUI 将视图定位到其他位置，否则 SwiftUI 会将视图定位到相对于屏幕中心的位置。
+不管我们如何截断文本，我们将看到文本视图始终位于主视图（main view）的中心。这是 SwiftUI 的默认行为 -- 除非我们明确告诉 SwiftUI 将视图定位到其它位置，否则 SwiftUI 会将视图定位到相对于屏幕中心的位置。
