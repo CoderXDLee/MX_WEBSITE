@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "1.2 如何使用文本视图创建静态标签"
+title: "1.2_如何使用 Text 创建静态标签"
 subtitle: ""
 summary: " "
 authors: [admin]
@@ -29,12 +29,17 @@ projects: []
 ---
 
 <!-- more -->
-### 1. 基本用法
-文本视图 `Text` 主要用于在屏幕上显示静态文本，相当于 UIKit 中的 UILabel。最基本的用法如下:
+### 1. 简介
+`Text` 主要用于在屏幕上显示静态文本，相当于 UIKit 中的 `UILabel`。
+
+### 2. 基本用法
+最基本的用法如下:
 ```swift
 Text("Hello world")
 ```
-在内容视图的预览窗口中，您可能会看到 `Automatic preview updating paused`， 继续按 Resume 以让 Swift 开始构建代码并向您展示其外观的实时预览。
+在内容视图的预览窗口中，您可能会看到 `Automatic preview updating paused`， 继续按 `Resume` 以让 Swift 开始构建代码并向您展示其外观的实时预览。
+效果预览:
+![]()
 
 ### 2. 设置显示行数
 默认情况下，Text 只显示一行 - 如果空间不足，字符将被剪切并替换为 `...`。因此如果我们要显示的文本很长，就会看到这种情况发生。如果要改变这种行为 - 比如你希望  Text 可以显示多行文本，那么可以这样做，使其具有特定的行数:

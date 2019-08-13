@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "1.1 工程模板介绍"
+title: "1.1_工程模板介绍"
 subtitle: ""
 summary: "The introduction of SwiftUI project template"
 authors: [admin]
