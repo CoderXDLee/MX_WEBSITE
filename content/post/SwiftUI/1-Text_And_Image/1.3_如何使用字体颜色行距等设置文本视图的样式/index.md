@@ -36,6 +36,7 @@ projects: []
 ```swift
 struct ContentView: View {
     var body: some View {
+        // 1.设置字体
         Text("This is an extremely long string that will never fit even the widest of Phones")
             .lineLimit(nil)
             .font(.largeTitle)
@@ -44,13 +45,14 @@ struct ContentView: View {
 ```
 效果预览:
 ![1.3_text_font_large_title](img/1.3_text_font_large_title.png "Set a font for text")
-我们现在在文本视图下面使用了两个修饰符，这没关系 - 你可以将它们堆叠起来，并且它们都会生效。
+我们现在在文本视图下面使用了两个修改器，这没关系 - 你可以将它们堆叠起来，并且它们都会生效。
 
 ### 2. 设置文本对齐方式
 特别是，现在我们有多行文本，我们需要调整文本的对齐方式，使其居中，如下所示:
 ```swift
 struct ContentView: View {
     var body: some View {
+        // 2.设置文本对齐方式
         Text("This is an extremely long string that will never fit even the widest of Phones")
             .lineLimit(nil)
             .font(.largeTitle)
@@ -62,10 +64,11 @@ struct ContentView: View {
 ![1.3_text_alignment_center](img/1.3_text_alignment_center.png "Set center alignment for text")
 
 ### 3. 设置字体颜色
-我们可以通过 `.foregroundColor()` 修饰符来设置文本颜色，如下所示:
+我们可以通过 `.foregroundColor()` 修改器来设置文本颜色，如下所示:
 ```swift
 struct ContentView: View {
     var body: some View {
+        // 3. 设置字体颜色
         Text("The best laid plans")
             .foregroundColor(Color.red)
     }
@@ -79,6 +82,7 @@ struct ContentView: View {
 ```swift
 struct ContentView: View {
     var body: some View {
+        // 4. 设置背景颜色
         Text("The best laid plans")
             .foregroundColor(Color.red)
             .background(Color.yellow)
@@ -91,10 +95,15 @@ struct ContentView: View {
 ### 5. 设置行间距
 我们可以设置多行文本的行间距，行间距默认值为0，表示没有额外的行间距，但是我们可以通过以下方式在行与行之间指定一个值来添加额外的行间距。
 ```swift
-Text("This is an extremely long string that will never fit even the widest of Phones")
-    .lineLimit(nil)
-    .font(.largeTitle)
-    .lineSpacing(50)
+struct ContentView: View {
+    var body: some View {
+        // 5.设置行间距
+        Text("This is an extremely long string that will never fit even the widest of Phones")
+            .lineLimit(nil)
+            .font(.largeTitle)
+            .lineSpacing(50)
+    }
+}
 ```
 效果预览:
 ![1.3_text_line_spacing](img/1.3_text_line_spacing.png "Set a line spacing for text")
