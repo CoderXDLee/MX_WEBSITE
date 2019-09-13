@@ -29,7 +29,7 @@ projects: []
 ---
 
 <!-- more -->
-> **贴士**: 你可能认为本章是完全可以略读的，但除非你是一个 Swift 天才，否则你应该读到最后再确定。
+> **小贴士**: 也许你认为本章是完全可以略读的，但除非你是一个 Swift 天才，否则你应该读到最后再确定。
 
 ### 1. 简介
 ![1.1_swiftui_basic_template](img/1.1_swiftui_basic_template.png)
