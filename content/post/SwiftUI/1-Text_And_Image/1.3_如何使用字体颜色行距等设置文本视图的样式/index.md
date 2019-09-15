@@ -75,7 +75,7 @@ struct ContentView: View {
 效果预览:
 ![1.3_text_foregroundcolor](img/1.3_text_foregroundcolor.png "Set a foreground color for text")
 
-### 4. 背景
+### 4. 设置背景颜色
 我们可以使用 `.background()` 来设置背景颜色，但是它不仅仅可以用来设置背景颜色，也可以设置背景视图。无论如何，为了给我们的文本视图设置一个黄色背景，代码如下:
 ```swift
 struct ContentView: View {
@@ -97,7 +97,6 @@ struct ContentView: View {
     var body: some View {
         // 5.设置行间距
         Text("This is an extremely long string that will never fit even the widest of Phones")
-            .lineLimit(nil)
             .font(.largeTitle)
             .lineSpacing(50)
     }
