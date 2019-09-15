@@ -38,7 +38,7 @@ var body: some View {
 }
 ```
 运行效果:
-![load_image_from_bundle](img/load_image_from_bundle.png "load image from buldle")
+![1.5_load_image_from_bundle.png](img/1.5_load_image_from_bundle.png "load image from buldle")
 
 ### 2. 从 System icons 加载
 要从苹果旧金山符号集(Apple’s San Francisco Symbol set)中加载图标，请使用 `Image(systemName: )` 初始化器，传入图标字符串进行加载，如下所示:
@@ -46,7 +46,7 @@ var body: some View {
 Image(systemName: "cloud.heavyrain.fill")
 ```
 运行效果:
-![load_image_from_systemicon](img/load_image_from_systemicon.png "load image from system icons")
+![1.5_load_image_from_systemicon](img/1.5_load_image_from_systemicon.png "load image from system icons")
 
 ### 3. 从 UIImage 加载
 最后，可以从现有的 UIImage 创建一个图像视图。因为这需要更多的代码，所以需要显式地使用 return 关键字。
@@ -58,21 +58,21 @@ guard let image = UIImage(named: "example-image") else {
 return Image(uiImage: image)
 ```
 运行效果:
-![load_image_from_uiimage](img/load_image_from_uiimage.png "load image from uiimage")
+![1.5_load_image_from_uiimage](img/1.5_load_image_from_uiimage.png "load image from uiimage")
 
-### 4. foregroundColor
+### 4. 通过 foregroundColor 给系统图标着色
 如果你使用的是 系统图标集，则返回的图像是 `可缩放` 和 `可着色` 的，这意味着你可以使用 `foregroundColor()` 修改器对图像着色。
 ```swift
 Image(systemName: "cloud.heavyrain.fill")
     .foregroundColor(.red)
 ```
 运行效果:
-![foreground_color_image](img/foreground_color_image.png "set foreground color for system icon")
-### 5. 动态文本样式
+![1.5_foreground_color_image](img/1.5_foreground_color_image.png "set foreground color for system icon")
+### 5. 通过给系统图标设置动态文本样式来放大图像
 这意味着你可以通过匹配任何 `Dynamic Type` 文本样式，来要求 SwiftUI 放大图像:
 ```swift
 Image(systemName: "cloud.heavyrain.fill")
     .font(.largeTitle)
 ```
 运行效果:
-![font_largetitle_image](img/font_largetitle_image.png "set font as largeTitle for system icons")
+![1.5_font_largetitle_image](img/1.5_font_largetitle_image.png "set font as largeTitle for system icons")
