@@ -29,16 +29,15 @@ projects: []
 ---
 
 <!-- more -->
-`Text` 不仅在外观方面可以让我们进行可预测的广泛控制，而且它们还可以与 `Dynamic Type` 等苹果的核心技术无缝协作。
+`Text` 不仅在外观方面可以让我们进行可预测的广泛控制，而且它们还可以与 `Dynamic Type` 等 Apple 的核心技术无缝协作。
 
 ### 1. 设置字体
 默认情况下，文本视图有一个 `Body` 动态类型样式，但是我们可以通过以下方式调用 `.font()`，从其它 _sizes_ 和 _weights_ 进行选择:
 ```swift
 struct ContentView: View {
     var body: some View {
-        // 1.设置字体
-        Text("This is an extremely long string that will never fit even the widest of Phones")
-            .lineLimit(nil)
+        // 1. 设置字体
+        Text("This is an extremely long text string that will never fit even the widest of Phones")
             .font(.largeTitle)
     }
 }
@@ -54,7 +53,6 @@ struct ContentView: View {
     var body: some View {
         // 2.设置文本对齐方式
         Text("This is an extremely long string that will never fit even the widest of Phones")
-            .lineLimit(nil)
             .font(.largeTitle)
             .multilineTextAlignment(.center)
     }
@@ -70,7 +68,7 @@ struct ContentView: View {
     var body: some View {
         // 3. 设置字体颜色
         Text("The best laid plans")
-            .foregroundColor(Color.red)
+            .foregroundColor(.red)
     }
 }
 ```
@@ -84,7 +82,7 @@ struct ContentView: View {
     var body: some View {
         // 4. 设置背景颜色
         Text("The best laid plans")
-            .foregroundColor(Color.red)
+            .foregroundColor(.red)
             .background(Color.yellow)
     }
 }
