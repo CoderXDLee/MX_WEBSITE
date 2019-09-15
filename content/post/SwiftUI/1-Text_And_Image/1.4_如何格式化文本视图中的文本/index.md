@@ -56,4 +56,4 @@ struct ContentView_Previews: PreviewProvider {
 ```
 
 效果预览:
-![date_formatter](img/date_formatter_text.png "date formatter")
+![1.4_date_formatter_text.png](img/1.4_date_formatter_text.png "date formatter")
