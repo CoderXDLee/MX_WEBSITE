@@ -36,7 +36,7 @@ SwiftUI 的 `Image` 视图能够以不同的方式进行缩放，就像 `UIImage
 ```swift
 Image("ba_xian_tai")
 ```
-运行效果:
+效果预览:
 ![1.6_the_default_content_mode](img/1.6_the_default_content_mode.png "default content mode")
 
 如果添加 `resizable()` 修饰符，则图像将自动调整大小，以填充所有可用空间: 
@@ -44,7 +44,7 @@ Image("ba_xian_tai")
 Image("ba_xian_tai")
     .resizable()
 ```
-运行效果:
+效果预览:
 ![1.6_resizable_image](img/1.6_resizable_image.png "resizable image")
 然而，这也可能导致图像的原始纵横比失真，因为它将在所有维度上被拉伸任意量，以使其填充空间。
 
