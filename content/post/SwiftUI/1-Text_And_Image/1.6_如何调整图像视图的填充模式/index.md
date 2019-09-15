@@ -28,34 +28,44 @@ image:
 projects: []
 ---
 
-![ba_xian_tai](img/ba_xian_tai.png)
-SwiftUI 的 `Image` 能够以不同的方式进行缩放，就像 `UIImageView` 的 _content mode_ 一样。
+![1.6_ba_xian_tai](img/1.6_ba_xian_tai.png)
+SwiftUI 的 `Image` 视图能够以不同的方式进行缩放，就像 `UIImageView` 的 **content mode** 一样。
 
 ### 1.默认
-默认情况下，图像视图会自动调整其内容的大小，这可能会使它们超出屏幕。
+默认情况下，图像视图会根据其内容自动调整大小，这可能会使它们超出屏幕范围。
 ```swift
 Image("ba_xian_tai")
 ```
 运行效果:
-![the_default_content_mode](img/the_default_content_mode.png "default content mode")
+![1.6_the_default_content_mode](img/1.6_the_default_content_mode.png "default content mode")
 
-如果添加了 `resizable()` 修饰符，则图像将自动调整大小，以填充所有可用空间: 
+如果添加 `resizable()` 修饰符，则图像将自动调整大小，以填充所有可用空间: 
 ```swift
 Image("ba_xian_tai")
     .resizable()
 ```
 运行效果:
-![resizable_image](img/resizable_image.png "resizable image")
-然而，这也可能导致图像的原始纵横比失真，因为它将在所有维度上被拉伸任意数量，以使其填充空间。
+![1.6_resizable_image](img/1.6_resizable_image.png "resizable image")
+然而，这也可能导致图像的原始纵横比失真，因为它将在所有维度上被拉伸任意量，以使其填充空间。
 
-### 2. .fill 和 .fit
-如果要保持其纵横比，应使用 `.fill` 或 `.fit`添加一个`aspectRatio()`修饰符，如下所示：
+### 2. `.fill` 和 `.fit`
+如果要保持其纵横比，应使用 `.fill` 或 `.fit`添加一个`aspectRatio()`修饰符，如下所示:
+#### 2.1 fill
 ```swift
 Image("ba_xian_tai")
     .resizable()
     .aspectRatio(contentMode: .fill)
 ```
-运行效果:
-![fill_content_mode](img/fill_content_mode.png "content mode = .fill")
-![fit_content_mode](img/fit_content_mode.png "content mode = .fit")
-注意: 在当前的测试版中，有一个bug，`.fit` 内容模式仍然会导致图像被拉伸。
+
+效果预览:
+![1.6_fill_content_mode](img/1.6_fill_content_mode.png "content mode = .fill")
+
+#### 2.2 fit
+```swift
+Image("ba_xian_tai")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+```
+
+效果预览:
+![1.6_fit_content_mode](img/1.6_fit_content_mode.png "content mode = .fit")
