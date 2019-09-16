@@ -31,33 +31,39 @@ projects: []
 ### 1. `spacing`
 我们可以通过在 SwiftUI stacks 的构造方法中填一个值来设置间距，如下所示:
 ```swift
-var body: some View {
-    VStack(spacing: 50) {
-        Text("Hello SwiftUI")
-            .background(Color.red)
-        Text("Hello M X")
-            .background(Color.blue)
+struct ContentView: View {
+    var body: some View {
+        // 1. 设置 spacing
+        VStack(spacing: 50) {
+            Text("Hello SwiftUI")
+                .background(Color.red)
+            Text("Hello M X")
+                .background(Color.blue)
+        }
     }
 }
 ```
-运行效果:
-![stack_spacing](img/stack_spacing.png "Set a spacing for stack")
+效果预览:
+![2.2_stack_spacing](img/2.2_stack_spacing.png "Set a spacing for stack")
 
 ### 2. `Divider`
 我们可以在项目之间创建分隔符，以便 SwiftUI 在 _stack_ 中的每个项目之间进行小的视觉区分，如下所示:
 ```swift
-var body: some View {
-    VStack {
-        Text("Hello SwiftUI")
-           .background(Color.red)
-        Divider()
-        Text("Hello M X")
-           .background(Color.blue)
+struct ContentView: View {
+    var body: some View {
+        // 2. 设置 divider
+        VStack {
+            Text("Hello SwiftUI")
+                .background(Color.red)
+            Divider()
+            Text("Hello M X")
+                .background(Color.blue)
+        }
     }
 }
 ```
-运行效果:
-![stack_divider](img/stack_divider.png "Set a divider for stack")
+效果预览:
+![2.2_stack_divider](img/2.2_stack_divider.png "Set a divider for stack")
 
 ### 3. `alignment`
 默认情况下，_stacks_ 中的项目居中对齐。
@@ -67,33 +73,39 @@ var body: some View {
 
 要调整这种情况，请在创建 _stack_ 时按以下方式传递一个 _alignment_ 参数:
 ```swift
-var body: some View {
-    VStack(alignment: .leading) {
-        Text("Hello SwiftUI")
-           .background(Color.red)
-        Text("Hello M X")
-            .background(Color.blue)
+struct ContentView: View {
+    var body: some View {
+        // 3. 设置 alignment
+        VStack(alignment: .leading) {
+            Text("Hello SwiftUI")
+                .background(Color.red)
+            Text("Hello M X")
+                .background(Color.blue)
+        }
     }
 }
 ```
-运行效果:
-![stack_alignment_leading](img/stack_alignment_leading.png "Set alignment to .leading")
+效果预览:
+![2.2_stack_alignment_leading](img/2.2_stack_alignment_leading.png "Set alignment to .leading")
 
 这将使 `Hello SwiftUI` 和 `Hello M X` 左对齐，但它们最终将位于屏幕的中间，因为 stack 只占用所需的空间。
 
 ### 4.同时设置 `alignment` 和 `spacing`
 我们可以同时使用 _alignment_ 和 _spacing_ ，如下所示:
 ```swift
-var body: some View {
-    VStack(alignment: .leading, spacing: 20) {
-        Text("Hello SwiftUI")
-            .background(Color.red)
-        Text("Hello M X")
-            .background(Color.blue)
+struct ContentView: View {
+    var body: some View {
+        // 4. 同时设置 alignment 和 spacing
+        VStack(alignment: .leading, spacing: 20) {
+            Text("Hello SwiftUI")
+                .background(Color.red)
+            Text("Hello M X")
+                .background(Color.blue)
+        }
     }
 }
 ```
 运行效果:
-![stack_alignment_spacing](img/stack_alignment_spacing.png "Using alignment and spacing in stack")
+![2.2_stack_alignment_spacing](img/2.2_stack_alignment_spacing.png "Using alignment and spacing in stack")
 
 这将使两个文本视图水平对齐到 `leading`（对于从左到右的语言是左对齐），并在它们之间放置20个点的垂直间距。
