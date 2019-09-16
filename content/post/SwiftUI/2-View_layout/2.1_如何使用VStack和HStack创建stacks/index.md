@@ -28,9 +28,9 @@ image:
 projects: []
 ---
 
-SwiftUI 的内容视图 _content views_ 必须返回一个视图，即我们希望它们显示的视图。当我们想要一次在屏幕上显示多个视图时，我们需要告诉 SwiftUI 如何排列它们，这就是 `堆栈（stacks）`的来源。
+SwiftUI 的内容视图(content views)必须返回一个视图，即我们希望它们显示的视图。当我们想要一次性在屏幕上显示多个视图时，我们需要告诉 SwiftUI 如何排列它们，这就是 `堆栈（stacks）`的来源。
 
-`堆栈（Stacks）` 相当于 UIKit 中的 _UIStackView_ 。有三种形式: 
+`堆栈（Stacks）` 相当于 UIKit 中的 **UIStackView** 。有三种形式: 
 
 * 水平（HStack）
 * 垂直（VStack）
@@ -41,15 +41,20 @@ SwiftUI 的内容视图 _content views_ 必须返回一个视图，即我们希�
 ### 1. VStack
 让我们从一些简单的事情开始，先创建一个文本视图:
 ```swift
-var body: some View {
-    Text("Hello SwiftUI")
-        .background(Color.red)
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            // 1. 创建一个文本视图
+            Text("Hello SwiftUI")
+                .background(Color.red)
+        }
+    }
 }
 ```
-运行效果:
-![single_text](img/single_text.png "A single text")
+效果预览:
+![2.1_single_text](img/2.1_single_text.png "A single text")
 
-有了一个文本视图，如果我们想在下面再写一个，我们不能只写:
+如果我们想在下面再放一个文本视图，我们不能只写:
 ```swift
 var body: some View {
     Text("Hello SwiftUI")
@@ -61,31 +66,37 @@ var body: some View {
 
 那么怎么办呢？我们需要将其放置在 `VStack` 中，以便将文本视图放置在彼此上方:
 ```swift
-var body: some View {
-    VStack {
-       Text("Hello SwiftUI")
-           .background(Color.red)
-       Text("Hello M X")   
-           .background(Color.blue)         
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            // 2. 创建两个文本视图
+            Text("Hello SwiftUI")
+                .background(Color.red)
+            Text("hello M X")
+                .background(Color.blue)
+        }
     }
 }
 ```
-运行效果:
-![two_text_in_vstack](img/two_text_in_vstack.png "Two texts in VStack")
+效果预览:
+![2.1_two_text_in_vstack](img/2.1_two_text_in_vstack.png "Two texts in VStack")
 
 您会注意到 `VStack` 放置在屏幕的中心，标签也居中，它们之间有一些自动空间。
 
 ### 2. HStack
 如果我们希望文本视图并排水平放置，请使用如下方式将 `VStack` 替换为 `HStack`:
 ```swift
-var body: some View {
-    HStack {
-       Text("Hello SwiftUI")
-           .background(Color.red)
-       Text("Hello M X")   
-           .background(Color.blue)         
+struct ContentView: View {
+    var body: some View {
+        HStack {
+            // 3. 水平放置
+            Text("Hello SwiftUI")
+                .background(Color.red)
+            Text("hello M X")
+                .background(Color.blue)
+        }
     }
 }
 ```
-运行效果:
-![two_text_in_hstack](img/two_text_in_hstack.png "Two texts in HStack")
+效果预览:
+![2.1_two_text_in_hstack](img/2.1_two_text_in_hstack.png "Two texts in HStack")
