@@ -49,6 +49,14 @@ projects: []
 # 2 - 介绍
 Flutter 应用程序是使用 `Dart` 编程语言编写的，也是源自 Google，现在是 ECMA 标准。Dart 与其他现代语言（如 `Kotlin` 和 `Swift`）具有许多相同的特性，可以被编译成`Javascript` 代码。
 
+## 支持 AOT
 作为一个跨平台框架，Flutter 与 React Native 最为相似，因为 Flutter 允许一种 **响应式** 和 **声明式** 的编程风格。 然而，与 React Native 不同，Flutter 不需要使用 `Javascript bridge`，这样就可以改善应用程序启动时间和整体性能。 Dart 通过使用 `Ahead-Of-Time` 或 `AOT` 编译来实现此目的。
 
+## 支持 JIT
 Dart 的另一个独特之处是它也可以使用 `Just-In-Time` 或 `JIT` 编译。 使用 Flutter进行 JIT 编译通过允许 **热重载(hot reload)** 功能在开发期间刷新 UI， 而无需全新的构建，从而改进了开发工作流程。
+
+## Widgets
+Flutter 框架是围绕 `窗口小部件(Widgets)` 的思想构建的。在 Flutter 中，widgets 不仅用于应用程序的视图，还用于整个屏幕，甚至用于应用程序本身。
+
+## Fuchsia
+除了跨平台的 iOS 和 Android 开发之外，学习 Flutter 还将为您开发 `Fuchsia` 平台提供一个良好的开端，该平台目前是 Google 开发的实验性操作系统。
