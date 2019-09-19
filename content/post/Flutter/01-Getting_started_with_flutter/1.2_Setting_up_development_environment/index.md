@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "1.2_设置 Flutter 的开发环境"
+title: "1.2_搭建 Flutter 的开发环境"
 subtitle: ""
 summary: ""
 authors: [admin]
@@ -89,7 +89,7 @@ export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin"
 ```swift
 export PATH="/Users/devin/development/flutter/bin:$PATH"
 ```
-* 第4步: 运行 `source $ HOME /.<rc file>` 刷新当前窗口，或打开一个新的终端窗口以自动获取文件。
+* 第4步: 运行 `source $ HOME /.<rc file>` 刷新当前窗口使 `rc` 文件立即生效，或打开一个新的终端窗口以自动获取文件。
 * 第5步: 通过运行以下命令验证 `flutter/bin` 目录现在位于PATH中:
 ```swift
 echo $PATH
@@ -112,6 +112,7 @@ flutter precache
 flutter doctor
 ```
 此命令检查您的环境并向终端窗口显示报告。 Dart SDK 与 Flutter 捆绑在一起; 没有必要单独安装 Dart。 仔细检查输出以了解可能需要安装的其他软件或执行的其他任务（以粗体显示）。
+
 例如:
 ![1.2_flutter_doctor](img/1.2_flutter_doctor.png)
 如图可知，我们需要安装的依赖项如下:
