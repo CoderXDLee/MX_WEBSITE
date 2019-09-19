@@ -111,6 +111,8 @@ flutter precache
 ```swift
 flutter doctor
 ```
+此命令检查您的环境并向终端窗口显示报告。 Dart SDK 与 Flutter 捆绑在一起; 没有必要单独安装 Dart。 仔细检查输出以了解可能需要安装的其他软件或执行的其他任务（以粗体显示）。
+例如:
 ![1.2_flutter_doctor](img/1.2_flutter_doctor.png)
 如图可知，我们需要安装的依赖项如下:
 
