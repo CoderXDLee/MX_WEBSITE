@@ -92,4 +92,52 @@ struct ContentView: View {
 效果预览:
 ![1.7_gradient_diagonal](img/1.7_gradient_diagonal.png "diagonal gradient: white -> red -> black ")
 
+### 4. 径向渐变
+对于其他渐变样式，请尝试 `RadialGradient` 或 `AngularGradient`。 
+例如，这将创建一个从圆心开始到边缘的各种颜色的径向渐变:
+```swift
+struct ContentView: View {
+    var body: some View {
+        // 5. 径向渐变
+        let colors = Gradient(colors: [.red, .yellow, .green, .blue, .purple])
+        let conic = RadialGradient(gradient: colors, center: .center, startRadius: 50, endRadius: 200)
+        return Circle()
+            .fill(conic)
+            .frame(width: 400, height: 400)
+    }
+}
+```
+效果预览:
+![1.7_gradient_radial](img/1.7_gradient_radial.png "Radial gradient")
 
+### 5. 圆锥梯度
+这就形成一个角梯度（通常称为圆锥梯度），通过各种颜色然后返回到开始循环:
+```swift
+struct ContentView: View {
+    var body: some View {
+        // 6. 圆锥梯度
+        let colors = Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red])
+        let conic = AngularGradient(gradient: colors, center: .center)
+        return Circle()
+            .fill(conic)
+    }
+}
+```
+效果预览:
+![1.7_gradient_angular](img/1.7_gradient_angular.png "Angular gradient")
+
+### 6. 圆环
+由于所有三种渐变类型都符合 `ShapeStyle` 协议，因此可以将它们用于背景，填充和笔触。 例如，这使用我们的彩虹圆锥形渐变作为圆的粗内部笔画：
+```swift
+struct ContentView: View {
+    var body: some View {
+        // 7. 圆环
+        let colors = Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red])
+        let conic = AngularGradient(gradient: colors, center: .center, startAngle: .zero, endAngle: .degrees(360))
+        return Circle()
+            .strokeBorder(conic, lineWidth: 50)
+    }
+}
+```
+效果预览:
+![1.7_gradient_circle](img/1.7_gradient_circle.png)
