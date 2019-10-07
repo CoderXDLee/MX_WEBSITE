@@ -81,5 +81,7 @@ var body: some View {
         )
 }
 ```
+效果预览:
+![1.9_background_red_circle_clipped](img/1.9_background_red_circle_clipped.png)
 
 明确地说，您可以使用任何视图作为背景，例如，如果需要，可以使用另一个文本视图。
