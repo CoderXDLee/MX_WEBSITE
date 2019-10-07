@@ -41,7 +41,7 @@ struct ContentView: View {
     }
 }
 ```
-运行效果:
+效果预览:
 ![1.8_square_red_wh200](img/1.8_square_red_wh200.png "Square: 200 x 200")
 
 ### 2. 圆
@@ -56,5 +56,5 @@ struct ContentView: View {
     }
 }
 ```
-运行效果:
+效果预览:
 ![1.8_circle_blue_r50](img/1.8_circle_blue_r50.png "Circle: 50 x 50")

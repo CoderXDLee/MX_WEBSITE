@@ -110,7 +110,7 @@ struct ContentView: View {
 效果预览:
 ![1.7_gradient_radial](img/1.7_gradient_radial.png "Radial gradient")
 
-### 5. 圆锥梯度
+### 5. 角度渐变(圆锥梯度)
 这就形成一个角梯度（通常称为圆锥梯度），通过各种颜色然后返回到开始循环:
 ```swift
 struct ContentView: View {
@@ -126,7 +126,7 @@ struct ContentView: View {
 效果预览:
 ![1.7_gradient_angular](img/1.7_gradient_angular.png "Angular gradient")
 
-### 6. 圆环
+### 6. 角度渐变(圆环)
 由于所有三种渐变类型都符合 `ShapeStyle` 协议，因此可以将它们用于背景，填充和笔触。 例如，这使用我们的彩虹圆锥形渐变作为圆的粗内部笔画：
 ```swift
 struct ContentView: View {
