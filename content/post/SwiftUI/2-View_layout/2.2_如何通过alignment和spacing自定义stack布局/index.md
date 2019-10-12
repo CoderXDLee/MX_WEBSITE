@@ -47,7 +47,7 @@ struct ContentView: View {
 ![2.2_stack_spacing](img/2.2_stack_spacing.png "Set a spacing for stack")
 
 ### 2. `Divider`
-我们可以在项目之间创建分隔符，以便 SwiftUI 在 _stack_ 中的每个项目之间进行小的视觉区分，如下所示:
+我们可以在项目之间创建分隔线，以便 SwiftUI 在 _stack_ 中的每个项目之间进行较小的视觉区分，如下所示:
 ```swift
 struct ContentView: View {
     var body: some View {

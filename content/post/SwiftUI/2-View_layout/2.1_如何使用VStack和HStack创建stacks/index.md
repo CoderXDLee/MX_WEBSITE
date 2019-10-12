@@ -82,7 +82,7 @@ struct ContentView: View {
 效果预览:
 ![2.1_two_text_in_vstack](img/2.1_two_text_in_vstack.png "Two texts in VStack")
 
-您会注意到 `VStack` 放置在屏幕的中心，标签也居中，它们之间有一些自动空间。
+您会注意到: `VStack` 位于屏幕的中心，标签也居中，并且它们之间有一些自动间隔。
 
 ### 2. HStack
 如果我们希望文本视图并排水平放置，请使用如下方式将 `VStack` 替换为 `HStack`:
