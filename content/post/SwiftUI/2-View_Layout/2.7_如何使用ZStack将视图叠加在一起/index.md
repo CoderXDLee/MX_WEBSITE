@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "2.4_如何使用ZStack将视图叠加在一起"
+title: "2.7_如何使用ZStack将视图叠加在一起"
 subtitle: ""
 summary: " "
 authors: [admin]
@@ -43,8 +43,8 @@ var body: some View {
     }
 }
 ```
-运行效果:
-![zstack_image_text](img/zstack_image_text.png "Set zstack with a image and a text, image is below text")
+效果预览:
+![2.7_zstack_image_text](img/2.7_zstack_image_text.png "Set zstack with a image and a text, image is below text")
 ### 2. 对齐
 与其它 _stack_ 类型一样，`ZStack` 也可以设置对齐方式，这样它就不会总是将事物置于自身的中心位置:
 
@@ -61,6 +61,6 @@ var body: some View {
     }
 }
 ```
-运行效果:
-![zstack_alignment_leading](img/zstack_alignment_leading.png "Set zstack's alignment as .leading")
+效果预览:
+![2.7_zstack_alignment_leading](img/2.7_zstack_alignment_leading.png "Set zstack's alignment as .leading")
 但是，它没有 _spacing_ 属性，因为它实际上没有意义。
