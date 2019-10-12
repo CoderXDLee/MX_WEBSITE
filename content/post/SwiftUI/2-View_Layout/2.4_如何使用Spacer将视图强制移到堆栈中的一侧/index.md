@@ -98,3 +98,5 @@ struct ContentView: View {
 ```
 效果预览:
 ![2.4_using_multi_spacer](img/2.4_using_multi_spacer.png "Using multi spacer view to divide up all remaining space")
+
+如果为 `Spacer` 提供一定范围的值，例如使用 `.frame（minHeight: 50,maxHeight:500）`，则它将自动占用尽可能多的空间，直到您设置的最大值。 以这种方式添加一些灵活性通常是一个好主意，这样我们的用户界面就可以更轻松地跨设备扩展。
