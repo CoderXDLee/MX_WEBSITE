@@ -47,7 +47,8 @@ struct ContentView: View {
 ```
 效果预览:
 ![2.3_padding_system_default](img/2.3_padding_system_default.png "Set padding with system default")
-注意: 这里默认设置了视图四周的填充。
+
+> 注意: 这里默认设置了视图四周的填充。
 
 ### 2. 只设置一侧系统默认 padding
 我们也可以自定义要应用的 填充 和 位置。因此，我们只希望将系统填充应用于一侧:
@@ -67,7 +68,8 @@ struct ContentView: View {
 ```
 效果预览:
 ![2.3_padding_system_bottom](img/2.3_padding_system_bottom.png "Set bottom padding with system default")
-注意: 这里只设置了底部填充，与上面的例子不同。
+
+> 注意: 这里只设置了底部填充，与上面的例子不同。
 
 ### 3. 用具体数值来设置 padding
 我们可能希望控制对所有边应用了多少填充:
