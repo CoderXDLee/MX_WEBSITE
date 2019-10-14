@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "2.7_如何使用size_classes创建不同的布局"
+title: "2.10_如何使用size_classes创建不同的布局"
 subtitle: ""
 summary: " "
 authors: [admin]
@@ -31,9 +31,9 @@ projects: []
 <!-- more -->
 SwiftUI 通过在环境中暴露 _size classes_ 来原生支持它。如果要使用它，我们首先需要创建一个 `@Environment` 对象来存储其值，如下所示:
 ```swift
-@Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+@Environment(\.horizontalSizeClass) var horizontalSizeClass
 ```
-然后在我们需要时检查该属性的值，查找 `.compact` 或 `.regular`，如下所示:
+然后我们可以根据需要检查该属性的值，查找 `.compact` 或 `.regular`，如下所示:
 ```swift
 if horizontalSizeClass == .compact {
     return Text("Compact")
@@ -45,7 +45,7 @@ if horizontalSizeClass == .compact {
 ```swift
 struct ContentView: View {
     
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     var body: some View {
         if horizontalSizeClass == .compact {
@@ -59,8 +59,10 @@ struct ContentView: View {
 运行效果:
 
 (1) 正向竖屏
-![size_classes_compact](img/size_classes_compact.png "Text - Compact")
+![2.10_size_classes_compact](img/2.10_size_classes_compact.png "Text - Compact")
 (2) 横屏 - 刘海在右侧
-![size_classes_regular01](img/size_classes_regular01.png "Text - Regular01")
+![2.10_size_classes_regular01](img/2.10_size_classes_regular01.png "Text - Regular01")
 (3) 横屏 - 刘海在左侧
-![size_classes_regular02](img/size_classes_regular02.png "Text - Regular02")
+![2.10_size_classes_regular02](img/2.10_size_classes_regular02.png "Text - Regular02")
+
+SizeClass 是通过将 VStack 或 HStack 用于内容来使用户界面智能地适应可用空间的好方法。 例如，如果我们有很多空间，则可以水平放置东西，但在空间有限时切换到垂直布局。
