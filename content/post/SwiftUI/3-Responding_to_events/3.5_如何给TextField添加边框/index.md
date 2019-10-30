@@ -30,18 +30,17 @@ projects: []
 
 <!-- more -->
 SwiftUI 的 `TextField` 视图默认没有样式，这意味着在屏幕上它是一个空白区域。如果这样就符合你想要的风格，那就太好了，你已经完成了。但是，我们大多时候更愿意在 `TextField` 周围添加边框，以使其更清晰。
-如果想获得我们习惯使用的 UITextField 的圆角矩形样式，我们应该使用 `.textFieldStyle(.roundedBorder)` 修饰符，如下所示:
+如果想获得我们习惯使用的 UITextField 的圆角矩形样式，我们应该使用 `.textFieldStyle(RoundedBorderTextFieldStyle())` 修饰符，如下所示:
 ```swift
-struct ContentView : View {
-    
-    @State var text = ""
+struct ContentView: View {
+    @State private var name = ""
     var body: some View {
-        TextField($text, placeholder: Text("Enter some text"))
+        TextField("Enter your name", text: $name)
             .padding()
-            .textFieldStyle(.roundedBorder)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
 ```
-运行效果:
-![textfield_style_rounded_border](img/textfield_style_rounded_border.png "textFieldStyle is roundedBorder style")
+效果预览:
+![3.5_textfield_style_rounded_border](img/3.5_textfield_style_rounded_border.png "textFieldStyle is roundedBorder style")
 
