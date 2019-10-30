@@ -33,16 +33,20 @@ projects: []
 SwiftUI 的 `按钮(Button)` 类似于 UIKit 中的 `UIButton`，跟 UIButton 的区别在于:
 
 * 在显示内容方面 SwiftUI 的按钮更为灵活
-* SwiftUI 的按钮使用 `闭包` 来实现其 action，而 UIButton 使用的是 `target/action` 系统
+* SwiftUI 的按钮使用 `闭包` 来实现其 action，而 UIButton 使用的是旧的 `target/action` 系统
 
 ### 2. Button 初体验
 那么，如何创建一个 SwiftUI 的按钮呢?，我们可以从以下代码开始:
 ```swift
-Button(action: {
-    // your action here
-            
-}) {
-    Text("Button title")
+struct ContentView: View {
+    var body: some View {
+        // 1. 创建一个 SwiftUI 按钮
+        Button(action: {
+            // your action here
+        }, label: {
+            Text("Button title")
+        })
+    }
 }
 ```
 由以上代码可以看到，创建 Button 的的方法有两个参数，都是闭包，第一个闭包负责传入 action，第二个闭包负责传入按钮上的文本。
@@ -50,39 +54,55 @@ Button(action: {
 ### 3. Button 简单用例
 例如: 我们可以创建一个按钮，在点击按钮时显示或隐藏一些详细信息:
 ```swift
-struct ContentView : View {
+struct ContentView: View {
     
-    @State var showDetails = false
+    @State private var showDetails = false
     
     var body: some View {
+        
+        // 2. 点击按钮，显示或隐藏详细信息
         VStack {
             Button(action: {
-               self.showDetails.toggle()
-            }) {
-                Text("Show detail information")
-            }
+                self.showDetails.toggle()
+            }, label: {
+                Text("Show details")
+            })
             
             if showDetails {
-                Text("You should follow me on M X Website")
+                Text("You should follow me on https://coderxdlee.github.io/")
                     .font(.largeTitle)
-                    .lineLimit(nil)
             }
         }
     }
 }
 ```
-运行效果:
-![button_show_detail_information](img/button_show_detail_information.gif "Click button to show detail information")
+效果预览:
+![3.3_button_show_detail_information](img/3.3_button_show_detail_information.gif "Click button to show detail information")
 
 ### 4. 提示
-在学习框架时最常做的事情是分散调用 `print()`，这样我们就可以看到什么时候发生了什么事情。 如果我们想通过按钮 action 来尝试，首先应右键单击预览画布中的播放按钮，然后选择 **调试预览**，以便调用 `print()` 工作。
+在学习框架时，最常做的事情是分散调用 `print()`，这样我们就可以看到什么时候发生了什么事情。 如果我们想通过按钮 action 来尝试，首先应右键单击预览画布中的播放按钮，然后选择 **调试预览**，以便调用 `print()` 工作。
 按钮内的标题可以是任何类型的视图，因此您可以创建这样的图像按钮:
 ```swift
-Button(action: {
-    self.showDetails.toggle()
-}) {
-    Image("example-image")
+struct ContentView: View {
+    
+    @State private var showDetails = false
+    
+    var body: some View {
+        // 2. 点击按钮，显示或隐藏详细信息
+        VStack {
+            Button(action: {
+                self.showDetails.toggle()
+            }, label: {
+                Image("example-image")
+            })
+            
+            if showDetails {
+                Text("You should follow me on https://coderxdlee.github.io/")
+                    .font(.largeTitle)
+            }
+        }
+    }
 }
 ```
-运行效果:
-![button_image_show_detail](img/button_image_show_detail.gif "Set an image for button")
+效果预览:
+![3.3_button_image_show_detail](img/3.3_button_image_show_detail.gif "Set an image for button")
