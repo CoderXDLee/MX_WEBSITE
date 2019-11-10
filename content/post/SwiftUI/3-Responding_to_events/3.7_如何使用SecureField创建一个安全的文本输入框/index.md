@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 <!-- more -->
-SwiftUI 的 `SecureTextField` 的工作方式与常规的 `TextField` 完全相同，只是为了保护隐私而屏蔽了字符。当然，它绑定的底层值（underlying value）仍然是一个普通的字符串，因此你可以根据需要检查它。
+SwiftUI 的 `SecureField` 的工作方式与常规的 `TextField` 完全相同，只是为了保护隐私而屏蔽了字符。当然，它绑定的底层值（underlying value）仍然是一个普通的字符串，因此你可以根据需要检查它。
 下面是一个示例，创建了一个绑定到本地 `@State`  属性的 `SecureField`，以便我们显示键入的内容:
 ```swift
 struct ContentView: View {
