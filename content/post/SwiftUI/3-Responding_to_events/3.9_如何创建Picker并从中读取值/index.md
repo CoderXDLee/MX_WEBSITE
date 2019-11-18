@@ -55,5 +55,3 @@ struct ContentView: View {
 ```
 效果预览:
 ![3.9_picker_select_color](img/3.9_picker_select_color.gif "Selected color")
-
-注意: 将 Picker 放在某个内容中非常重要，以确保它在iOS上以默认的轮子样式显示。
