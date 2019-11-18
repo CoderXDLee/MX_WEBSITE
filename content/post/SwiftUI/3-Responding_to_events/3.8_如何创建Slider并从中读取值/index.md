@@ -29,16 +29,16 @@ projects: []
 ---
 <!-- more -->
 ### 1. 简介
-SwiftUI 的 `Slider` 视图与 `UISlider` 的工作原理非常相似，不同之处在于，我们需要将其绑定到某个地方，以便存储其值。
+SwiftUI 中的 `Slider` 视图与 `UISlider` 的工作原理非常相似，不同之处在于，我们需要将其绑定到某个状态属性(@State)，以便存储其值。
 
-当我们创建它时，可以提供多种参数，但我们可能最关心的是:
+当我们创建它时，可以提供多种参数，但我们最关心的可能是以下参数:
 
-* `Value`:  将其绑定到的 Double 值
-* `From and To`: 滑块的范围
-* `By`: 移动滑块时要更改多少值
+* `value`:  将其绑定到的 Double 值
+* `in`: Slider 的范围
+* `by`: 移动 Slider 时要更改多少值
 
 ### 2. 示例
-例如: 我们创建一个绑定到  `Celsius` 属性的滑块，然后随着滑块的移动更新文本视图，以便在 **Celsius(摄氏温度)** 和 **Fahrenheit(华氏温度)** 之间进行转换:
+例如: 我们将创建一个 Slider，并将其绑定到状态属性 `celsius`，然后随着 Slider 的移动更新文本视图，以便在 **Celsius(摄氏温度)** 和 **Fahrenheit(华氏温度)** 之间进行转换:
 ```swift
 struct ContentView: View {
     @State private var celsius: Double = 0
