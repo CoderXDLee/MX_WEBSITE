@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "3.9_如何创建选择器Picker并从中读取值"
+title: "3.9_如何创建Picker并从中读取值"
 subtitle: ""
 summary: " "
 authors: [admin]
@@ -28,27 +28,32 @@ image:
 projects: []
 ---
 <!-- more -->
-SwiftUI 的 `Picker` 视图将 UIPicker 和 UITableView 结合在一起。同时也适应其它操作系统上的其它样式。最棒的是我们真的不需要关系它是如何工作的 -- SwiftUI 可以很好的自动适应它的环境。
-与大多数其它控件一样，必须将 picker 附加到某种 state，以跟踪 picker 的选择。例如: 这会创建一个 colors 数组和一个存储所选颜色的整数，然后将其与 picker，Text 视图一起使用，以便您可以看到正在读取的值:
+## 1. 简介
+SwiftUI 中的 `Picker` 视图可以将 `UIPicker` 和 `UITableView` 结合在一起。同时还可以适应其它操作系统上的其它样式。很好的一点是，我们真的不需要关心它的工作原理 -- SwiftUI 在自动适应环境方面做得很好。
+
+与大多数其它控件一样，我们必须将 Picker 附加到某种状态属性，以跟踪 picker 的选择。
+
+## 2. 示例
+例如: 我们将创建一个 colors 数组和一个存储所选颜色的整数，然后将其与 Picker，Text 视图一起使用，以便我们可以看到正在读取的值:
 ```swift
 struct ContentView: View {
     
-    var colors = ["Red", "Orange", "Yellow", "Green"]
+    var colors = ["Red", "Green", "Blue", "Tartan"]
     @State private var selectedColor = 0
     
     var body: some View {
         VStack {
             Picker(selection: $selectedColor, label: Text("Please choose a color")) {
                 ForEach(0..<colors.count) {
-                    Text(self.colors[$0]).tag($0)
+                    Text(self.colors[$0])
                 }
             }
-            Text("You selected: \(colors[selectedColor]) ")
+            Text("You selected: \(colors[selectedColor])")
         }
     }
 }
 ```
-运行效果:
-![picker_select_color](img/picker_select_color.gif "Selected color")
+效果预览:
+![3.9_picker_select_color](img/3.9_picker_select_color.gif "Selected color")
 
-注意: 将选择器视图放在某个内容中非常重要，以确保它在iOS上以默认的轮子样式显示。
+注意: 将 Picker 放在某个内容中非常重要，以确保它在iOS上以默认的轮子样式显示。
