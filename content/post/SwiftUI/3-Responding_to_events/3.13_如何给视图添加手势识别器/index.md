@@ -29,32 +29,30 @@ projects: []
 ---
 <!-- more -->
 ### 1. 简介
-任何 SwiftUI  视图都可以附加手势识别器，而这些手势识别器又可以附加闭包，在识别器被激活时执行闭包。
+我们可以给任何 SwiftUI  视图附加手势识别器，而这些手势识别器又可以附加闭包，这些闭包将在识别器被激活时运行。
 
 ### 2. 示例
-有几个手势识别器可供使用，这里我们提供其中几个的代码示例，以帮助入门 - 我们将看到它们有多相似。
+有几个手势识别器可供使用，这里将提供其中几个手势识别器的代码示例，以帮助入门 - 我们将看到它们有多相似。
 #### 2.1 `TapGesture` 点击手势
-创建 TapGesture 时，可以指定触发手势所需的 点击次数，然后附加将在手势发生时运行的 `onEnded` 闭包。
+创建 TapGesture 时，我们可以指定触发手势所需的点击次数，然后附加一个 `onEnded` 闭包，该闭包将在手势发生时运行。
 
 例如，我们来创建一个每次点击时都会变大的图像:
 ```swift
 struct ContentView: View {
-    
-    @State private var scale: Length = 1
-    
+    @State private var scale: CGFloat = 1.0
     var body: some View {
         Image("example-image")
             .scaleEffect(scale)
             .gesture(
                 TapGesture()
-                    .onEnded({ (_) in
+                    .onEnded({
                         self.scale += 0.1
                     })
             )
     }
 }
 ```
-运行效果:
+效果预览:
 ![3_13_tap_gesture_scale_image](img/3_13_tap_gesture_scale_image.gif "Tap to scale a image")
 
 #### 2.2 `LongPressGesture` 长按手势
@@ -74,7 +72,7 @@ struct ContentView: View {
     }
 }
 ```
-运行效果:
+效果预览:
 ![3_13_long_press_gesture_duration_2s](img/3_13_long_press_gesture_duration_2s.gif "Long pressed!")
 
 #### 2.3 `DragGesture` 拖拽手势
@@ -93,4 +91,5 @@ struct ContentView: View {
     }
 }
 ```
+效果预览
 ![3_13_drag_gesture_distance_50](img/3_13_drag_gesture_distance_50.gif "Drag gesture")
