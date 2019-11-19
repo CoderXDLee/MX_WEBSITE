@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "3.12_如何设置tap和double Tap手势"
+title: "3.12_如何读取tap和double Tap手势"
 subtitle: ""
 summary: " "
 authors: [admin]
@@ -28,33 +28,33 @@ image:
 projects: []
 ---
 <!-- more -->
-### 1. 初识
-任何 SwiftUI 视图都可以附加 `点击操作(tap action)`，我们可以指定在触发操作之前应该接收多少次点击。
+### 1. 简介
+我们可以给任何 SwiftUI 视图附加 `点击操作(tap action)`，并且可以指定在触发操作之前应该接收的点击次数。
 
 ### 2. 示例
 例如: 我们创建一个文本视图，在点击时将打印消息:
 ```swift
-struct ContentView : View {
+struct ContentView: View {
     var body: some View {
         Text("Tap me!")
-            .tapAction {
-                print("Tapped")
+            .onTapGesture {
+                print("Tapped!")
             }
     }
 }
 ```
-运行效果:
-![tap_gesture_tap_text](img/tap_gesture_tap_text.gif "Tap a text")
+效果预览:
+![3.12_tap_gesture_tap_a_text](img/3.12_tap_gesture_tap_a_text.gif "Tap a text")
 
 再创建一个图像视图，当双击时将打印消息:
 ```swift
 struct ContentView : View {
     var body: some View {
-        Image("example-img")
-            .tapAction(count: 2) {
+        Image("example-image")
+            .onTapGesture(count: 2) {
                 print("Double tapped!")
             }
     }
 ```
-运行效果:
-![tap_gesture_double_tap_image](img/tap_gesture_double_tap_image.gif "Double tapped!")
+效果预览:
+![3.12_tap_gesture_double_tap_a_image](img/3.12_tap_gesture_double_tap_a_image.gif "Double tapped!")
