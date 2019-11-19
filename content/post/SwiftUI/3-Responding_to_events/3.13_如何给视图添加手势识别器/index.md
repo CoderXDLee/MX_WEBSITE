@@ -64,9 +64,9 @@ struct ContentView: View {
     var body: some View {
         Image("example-image")
             .gesture(
-                LongPressGesture(minimumDuration: 2.0)
-                    .onEnded({ (_) in
-                            print("LongPressed!")
+                LongPressGesture(minimumDuration: 2)
+                    .onEnded({ _ in
+                        print("Pressed!")
                     })
             )
     }
@@ -84,7 +84,7 @@ struct ContentView: View {
         Image("example-image")
             .gesture(
                 DragGesture(minimumDistance: 50)
-                    .onEnded({ (_) in
+                    .onEnded({ _ in
                         print("Dragged!")
                     })
             )
