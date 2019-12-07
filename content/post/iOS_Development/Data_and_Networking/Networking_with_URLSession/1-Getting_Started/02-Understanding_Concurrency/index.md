@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "02 Understanding_Concurrency"
+title: "02_了解并发"
 subtitle: ""
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [Networking with URLSession]
+categories: [Data and Networking]
 date: 2019-12-04T23:19:38+08:00
 lastmod: 2019-12-04T23:19:38+08:00
 featured: false
@@ -27,3 +27,4 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+<!-- more -->

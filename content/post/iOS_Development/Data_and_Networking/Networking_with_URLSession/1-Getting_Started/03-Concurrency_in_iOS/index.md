@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "01_简介"
+title: "03 Concurrency_in_iOS"
 subtitle: ""
 summary: ""
-authors: [admin]
-tags: [Networking with URLSession]
-categories: [Data and Networking]
-date: 2019-12-04T23:18:29+08:00
-lastmod: 2019-12-04T23:18:29+08:00
+authors: []
+tags: []
+categories: []
+date: 2019-12-07T15:00:55+08:00
+lastmod: 2019-12-07T15:00:55+08:00
 featured: false
 draft: false
 
@@ -27,5 +27,3 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
-<!-- more -->
