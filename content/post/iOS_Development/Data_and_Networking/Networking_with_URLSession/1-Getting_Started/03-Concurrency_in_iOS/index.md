@@ -4,9 +4,9 @@
 title: "03 Concurrency_in_iOS"
 subtitle: ""
 summary: ""
-authors: []
-tags: []
-categories: []
+authors: [admin]
+tags: [Networking with URLSession]
+categories: [Data and Networking]
 date: 2019-12-07T15:00:55+08:00
 lastmod: 2019-12-07T15:00:55+08:00
 featured: false

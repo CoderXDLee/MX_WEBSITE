@@ -29,15 +29,15 @@ projects: []
 ---
 <!-- more -->
 # 1 - 前言
-自从十年前 iOS 和 Android 平台出现爆发式增长以来，跨平台开发(cross-platform development)一直是移动开发界的一个目标。同时为 iOS 和 Android 编写一个应用程序的能力可以为您的公司和团队节省大量的时间和精力。
+自从十年前 iOS 和 Android 平台出现爆炸式增长以来，跨平台开发(cross-platform development)一直是整个移动开发领域的目标。能够同时为 iOS 和 Android 编写一个应用程序的能力可以为您的公司和团队节省大量的时间和精力。
 
-多年来，已经发布了各种用于跨平台开发的工具，包括:
+多年来，已经发布了用于跨平台开发的各种工具集，包括:
 
 * 基于 Web 的工具: 如 Adobe 的 `PhoneGap`
 * 强大的框架: 如 Microsoft 的 `Xamarin`
 * 较新的工具: 如 Facebook 的 `React Native`
 
-每个工具集都有优缺点，它们在移动行业中都取得了不同程度的成功。
+每个工具集都有其优缺点，并且在移动行业中都取得了不同程度的成功。
 
 当然，进入跨平台开发领域的最新框架是来自 Google 的 `Flutter`。Flutter 在两个平台上都具有:
 
